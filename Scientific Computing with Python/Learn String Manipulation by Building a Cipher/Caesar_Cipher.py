@@ -10,9 +10,11 @@ def caesar(message, offset):
         if char == ' ':
             encrypted_text += char
         else:
+            # Find the index of the character in the alphabet
             index = alphabet.find(char)
             new_index = (index + offset) % len(alphabet)
             encrypted_text += alphabet[new_index]
     return encrypted_text
 encrytion = caesar(text, shift)
 print('Encrypted Text: ',  encrytion)
+
